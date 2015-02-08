@@ -157,15 +157,18 @@ function passJudgement(i) {
 
 function publish(categoryGoal) {
     var ans = document.createElement('div');
-    var percentNeeded = roundDecimal(categoryGoal * 100, 4); //apparently doesn't work if you put a semi-colon here
-    var v = document.createTextNode(percentNeeded + "%");
+    var percentNeeded = roundDecimal(categoryGoal * 100, 4); //apparently doesn't work if 
     
+    var v = document.createTextNode(percentNeeded + "%");   
     ans.appendChild(v);
-    ans.appendChild(document.createElement("br"));
-    ans.appendChild(document.createTextNode(passJudgement(categoryGoal)));
+    
+    //ans.appendChild(document.createTextNode(passJudgement(categoryGoal)));
 
     document.getElementById('finalGradeNeeded').appendChild(ans);
-
+    
+    var comment = document.createElement('div');
+    comment.appendChild(document.createTextNode(passJudgement(categoryGoal)));
+    document.getElementById('judge').appendChild(comment);
     //        //used to designate which variable is solved for in a nice string format
     //	var i = findVariable2D(allVarsPerm, inputVars[0][0]);
     //	var whatIsFound = allVarsPerm[i][1];
