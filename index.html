@@ -1,0 +1,216 @@
+
+<html>
+
+<head>
+    <title>TSS</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.3.min.css" />
+
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery.mobile-1.4.3.min.js"></script>
+    <script src="./js/tssTest.js"></script>
+    
+    <style>
+        h1 {
+            font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 26.3999996185303px;
+        }
+        
+        h3 {
+            font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 15.3999996185303px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HOME PAGE -->
+    <div data-role="page" id="home">
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>The Smart Slacker</h1>
+        </div>
+        <div data-role="content" align="center">
+                <img src="./img/3.jpg">
+            <h3>Spend the minimum effort on your final.<br> Enjoy life.</h3>
+            <input type="button" value="Tell me my fate." style="font-                                  size:10pt;background-color: #2ECC71; opacity:0.7"                                       onClick="clear();location.href='#currentGrade1';window.location.reload();">
+        </div>
+    </div>
+
+    <!-- CURRENT GRADE 1 | GRADE CALC -->
+    <div data-role="page" id="currentGrade1">
+        <!-- Header -->
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>Final Grade Calc</h1>
+            </button>
+        </div>
+
+        <div data-role="content" align="center">
+            <h3>What precentage grade do you have in the class?</h3>
+            </</p>
+            <form method="POST">
+                <input type="text" id="grade">
+                <input type="button" value=">>" style="background-color: #2ECC71; opacity: 0.8" onClick="addInputGrade();">
+            </form>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Start Over" style="font-size:10pt;background-color:                     #e74c3c; opacity:0.7" onClick="clear();location.href='#home';window.location.reload();">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- GOAL GRADE 2 | GRADE CALC -->
+    <div data-role="page" id="goalGrade2">
+        <!-- Header -->
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>Final Grade Calc</h1>
+        </div>
+
+        <div data-role="content" align="center">
+            <h3>What precentage grade do you want in the class?</h3>
+            </</p>
+            <form method="POST">
+                <input type="text" id="goal">
+                <input type="button" value=">>" style="background-color: #2ECC71; opacity: 0.8" onClick="addInputGoal();">
+            </form>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Start Over" style="font-size:10pt;background-color:                     #e74c3c; opacity:0.7" onClick="clear();location.href='#currentGrade1';window.location.reload();">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CATEGORY PERCENT 3 | GRADE CALC -->
+    <div data-role="page" id="categoryPercent3">
+        <!-- Header -->
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>Final Grade Calc</h1>
+        </div>
+        <div data-role="content" align="center">
+            <h3>What percentage is the final (or category with the final in it) worth? (if unweighted grades, put 100%)</h3>
+            <form method="POST">
+                <input type="text" id="categoryPercent">
+                <input type="button" value=">>" style="background-color: #2ECC71; opacity: 0.8" onClick="addInputCategoryPercent();">
+            </form>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Start Over" style="font-size:10pt;background-color:                     #e74c3c; opacity:0.7" onClick="clear();location.href='#currentGrade1';window.location.reload();">
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORY POINTS 4 | GRADE CALC -->
+    <div data-role="page" id="categoryPoints4">
+        <!-- Header -->
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>Final Grade Calc</h1>
+        </div>
+        <div data-role="content" align="center">
+            <h3>How many points are currently in the category?</h3>
+            <form method="POST">
+                <input type="text" id="categoryPoints1">
+                <input type="button" value=">>" style="background-color: #2ECC71; opacity: 0.65" onClick="addInputCategoryPoints();">
+            </form>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Start Over" style="font-size:10pt;background-color:                     #e74c3c; opacity:0.7" onClick="clear();location.href='#currentGrade1';window.location.reload();">
+            </div>
+        </div>
+    </div>
+
+    <!-- NOT IN USE
+    <div data-role="page" id="categoryPoints4.1">
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>Grade Calc</h1>
+        </div>
+        <div data-role="content" align="center">
+            <h3><b>How many points are in currently in the gradebook?</b></h3>
+            <form method="POST">
+                <input type="text" id="categoryPoints">
+                <input type="button" value=">>" style="background-color: #C7F464; opacity: 0.65"                    onClick="addInputCategoryPoints();">
+            </form>
+        </div>
+    </div>
+    -->
+
+    <!-- FINAL POINTS 5 | GRADE CALC -->
+    <div data-role="page" id="finalPoints5">
+        <!-- Header -->
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>Final Grade Calc</h1>
+        </div>
+        <div data-role="content" align="center">
+            <h3>How many points is the final worth?</h3>
+            <form method="POST">
+                <input type="text" id="finalPoints">
+                <input type="button" value=">>" style="background-color: #2ECC71; opacity: 0.65" onClick="addInputFinalPoints();">
+            </form>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Start Over" style="font-size:10pt;background-color:                     #e74c3c; opacity:0.7" onClick="clear();location.href='#currentGrade1';window.location.reload();">
+            </div>
+        </div>
+    </div>
+
+    <!-- FINAL PERCENT 6 | GRADE CALC -->
+    <div data-role="page" id="finalPercent6">
+        <!-- Header -->
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>Final Grade Calc</h1>
+        </div>
+        <div data-role="content" align="center">
+            <h3>Is the final its own category?</h3>
+            <select id="finalPercent" data-role="slider">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+            <input type="button" value=">>" style="background-color: #2ECC71; opacity: 0.65" onClick="addInputFinalPercent();">
+            </form>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Start Over" style="font-size:10pt;background-color:                     #e74c3c; opacity:0.7" onClick="clear();location.href='#currentGrade1';window.location.reload();">
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORY GRADE 7 | GRADE CALC -->
+    <div data-role="page" id="categoryGrade7">
+        <!-- Header -->
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>Final Grade Calc</h1>
+        </div>
+        <div data-role="content" align="center">
+            <h3>What is your current percentage in that category?</h3>
+            <form method="POST">
+                <input type="text" id="categoryGrade">
+                <input type="button" value=">>" style="background-color: #2ECC71; opacity: 0.65" onClick="addInputCategoryGrade();">
+            </form>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Start Over" style="font-size:10pt;background-color:                     #e74c3c; opacity:0.7" onClick="clear();location.href='#currentGrade1';window.location.reload();">
+            </div>
+        </div>
+    </div>
+
+    <!-- RESULT | GRADE CALC -->
+    <div data-role="page" id="resultGradeCalc">
+        <!-- Header -->
+        <div data-role="header" style="color: white;background-color: #3498db">
+            <h1>Final Grade Calc</h1>
+        </div>
+        <div data-role="content" align="center">
+            <h3>Your Final Grade Needed</h3>
+            <h3><div id="finalGradeNeeded" align="center"></div></h3>
+            <div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Start Over" style="font-size:10pt;background-color:                     #e74c3c; opacity:0.7" onClick="clear();location.href='#currentGrade1';window.location.reload();">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
